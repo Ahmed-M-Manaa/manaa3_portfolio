@@ -1,0 +1,260 @@
+.mainclass {
+  min-height: 100vh;
+  padding: 80px 20px;
+  background: #fef8f3;
+}
+
+.flex {
+  display: flex;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Right Section - Filter Buttons */
+.right-section {
+  flex: 0 0 250px;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  border-radius: 10em;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 1em 2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+  box-shadow: 0 0 0 0 black;
+  flex: 0 0 auto;
+  transition: 1s;
+margin-bottom: 1rem;}
+
+.btn:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
+}
+
+.btn:active {
+  box-shadow: 0 0 0 0 black;
+} 
+.btn-section {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+.projectButton{
+    text-decoration: none;
+    color: #000000;
+    background-color: #f8f9fa;
+}
+.projectButton:hover{
+    background-color: #ffffff;
+    color:#000000 ;
+    border: none;
+}
+
+
+
+
+.btn.active {
+  box-shadow: 2px 5px 0 0 black ;
+}
+
+/* Left Section - Projects Grid */
+.left-section {
+  flex: 1;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+.projectCard {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background: white;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.cardImage {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #000000;
+}
+
+.cardBody {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.cardText {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.projectButton {
+    background-color: #ffffff;
+    border: #000000 1px solid;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.projectButton:hover {
+  transform: translateY(-2px);
+    transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 rgb(0, 0, 0);
+ 
+}
+
+.projectCategory {
+  background: #f8f9fa;
+  color: #000000;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid #000000;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .flex {
+    gap: 30px;
+  }
+  
+  .right-section {
+    flex: 0 0 220px;
+  }
+  
+  .projectsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainclass {
+    padding: 60px 15px;
+  }
+  
+  .flex {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .right-section {
+    position: static;
+    flex: none;
+    width: 100%;
+  }
+  
+  .buttonGroup {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+  }
+  
+  .projectsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .cardBody {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainclass {
+    padding: 40px 10px;
+  }
+  
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .buttonGroup {
+    flex-direction: column !important;
+  }
+  
+  .btn {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .cardFooter {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .projectButton {
+    width: 100%;
+  }
+  
+  .projectCategory {
+    text-align: center;
+  }
+}
+
+/* Loading State */
+.noProjects {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.noProjects h3 {
+  color: #333;
+  margin-bottom: 15px;
+}

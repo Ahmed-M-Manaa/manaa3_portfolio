@@ -1,0 +1,11 @@
+:root {
+  --title-font: "NewBlackTypeface";
+}
+@font-face {
+  font-family: "NewBlackTypeface";
+  src: url("./NewBlackTypeface.woff2") format("openType"),
+    url("./assets/NewBlackTypeface-Medium.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

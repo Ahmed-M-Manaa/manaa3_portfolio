@@ -1,0 +1,204 @@
+:root {
+  --bg-color: rgb(253, 253, 253);
+  --text-color: #111;
+  --text-secondary: #555;
+  --border-color: black;
+  --shadow-color: black;
+  --title-font: inherit; /* Update with your actual font family */
+  
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  
+  /* Font sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+}
+
+.body {
+  background-color: var(--bg-color);
+  background-image: url("../../../assets/bgc.svg");
+  background-size: auto;
+  background-repeat: cover;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-md);
+}
+
+.herotext {
+  padding-top: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 90rem;
+}
+
+.herotext h1 {
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  color: var(--text-color);
+  line-height: 1.2;
+}
+
+.highlight {
+  font-family: var(--title-font);
+}
+
+.herotext h2 {
+  font-size: var(--text-3xl);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.herotext p {
+  font-size: var(--text-xl);
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 50rem;
+  padding-bottom: var(--space-xl);
+  line-height: 1.6;
+}
+
+/* Container for the two buttons */
+.twoButtons {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 90rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: white;
+  color: var(--text-color);
+  border-radius: 10em;
+  font-size: var(--text-lg);
+  font-weight: 600;
+  padding: var(--space-sm) var(--space-lg);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 0 0 var(--shadow-color);
+  flex: 0 0 auto;
+  transition: 1s;
+}
+
+.btn:hover {
+  transform: translateY(-0.25rem) translateX(-0.125rem);
+  box-shadow: 0.125rem 0.3125rem 0 0 var(--shadow-color);
+}
+
+.btn:active {
+  transform: translateY(0.125rem) translateX(0.0625rem);
+  box-shadow: 0 0 0 0 var(--shadow-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .body {
+    padding: var(--space-sm);
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .herotext {
+    padding-top: var(--space-lg);
+  }
+  
+  .herotext h1 {
+    font-size: var(--text-4xl);
+  }
+  
+  .herotext h2 {
+    font-size: var(--text-2xl);
+  }
+  
+  .herotext p {
+    font-size: var(--text-lg);
+    max-width: 40rem;
+    padding-bottom: var(--space-lg);
+  }
+  
+  .twoButtons {
+    gap: var(--space-md);
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 25rem;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .body {
+    padding: var(--space-xs);
+  }
+  
+  .herotext {
+    padding-top: var(--space-md);
+    gap: var(--space-xs);
+  }
+  
+  .herotext h1 {
+    font-size: var(--text-3xl);
+  }
+  
+  .herotext h2 {
+    font-size: var(--text-xl);
+  }
+  
+  .herotext p {
+    font-size: var(--text-base);
+    max-width: 30rem;
+    padding-bottom: var(--space-md);
+  }
+  
+  .twoButtons {
+    gap: var(--space-sm);
+    max-width: 20rem;
+  }
+  
+  .btn {
+    font-size: var(--text-base);
+    padding: var(--space-xs) var(--space-md);
+  }
+}
+
+@media (min-width: 1200px) {
+  .herotext h1 {
+    font-size: 3.5rem;
+  }
+  
+  .herotext h2 {
+    font-size: 2.25rem;
+  }
+  
+  .herotext p {
+    font-size: 1.375rem;
+    max-width: 55rem;
+  }
+}

@@ -1,0 +1,371 @@
+.contactSection {
+  padding: 80px 20px;
+    background:#fef8f3;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+transition: 1s;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.sectionSubtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgba(65, 65, 65, 0.9);
+  margin-bottom: 60px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Form Styles */
+.formContainer {
+  background: rgba(255, 255, 255, 0.778);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.input,
+.textarea {
+  padding: 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  border-radius: 10em;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 1em 2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+  box-shadow: 0 0 0 0 black;
+  flex: 0 0 auto;
+}
+
+.btn:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
+}
+
+.btn:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+}
+
+/* Info Container Styles */
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contactInfo {
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+
+}
+
+.infoTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.contactItem:last-child {
+  border-bottom: none;
+}
+
+.contactIcon {
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+background: linear-gradient(150deg,rgba(252, 127, 160, 1) 6%, rgba(254, 248, 243, 1) 39%, rgba(247, 116, 109, 1) 61%, rgba(237, 189, 121, 1) 100%);
+  border-radius: 50%;
+  color: rgb(0, 0, 0);
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactLabel {
+  font-weight: 600;
+  color: #000000;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.contactValue {
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contactValue:hover {
+  color: #667eea;
+}
+
+/* Social Links Styles */
+.socialSection {
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.socialTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.socialLinks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.socialLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 15px;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  color: #333;
+}
+
+.socialLink:hover {
+  transform: translateY(-5px);
+}
+
+.socialIcon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.socialName {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+}
+/* Contact.module.css */
+
+/* Modal Styles */
+.modal :global(.modal-content) {
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.modal :global(.modal-header) {
+  background: #000000;
+  border-bottom: 2px solid #333;
+  border-radius: 18px 18px 0 0;
+  padding: 20px 30px;
+}
+
+.modal :global(.modal-title) {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.modal :global(.btn-close) {
+  filter: invert(1);
+  opacity: 0.8;
+}
+
+.modal :global(.btn-close:hover) {
+  opacity: 1;
+}
+
+.modal :global(.modal-body) {
+  padding: 30px;
+  color: #000000;
+  font-size: 1.1rem;
+  text-align: center;
+  background: #ffffff;
+}
+
+.modal :global(.modal-footer) {
+  background: #f8f9fa;
+  border-top: 2px solid #333;
+  border-radius: 0 0 18px 18px;
+  padding: 20px 30px;
+  justify-content: center;
+}
+
+.modalButton :global(.btn) {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.modalButton :global(.btn:hover) {
+  background-color: #000000;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .contactContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 60px 15px;
+  }
+  
+  .sectionTitle {
+    font-size: 2.2rem;
+  }
+  
+  .sectionSubtitle {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+  
+  .formContainer {
+    padding: 30px 25px;
+  }
+  
+  .contactInfo,
+  .socialSection {
+    padding: 25px 20px;
+  }
+  
+  .socialLinks {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .contactContent {
+    gap: 30px;
+  }
+  
+  .formContainer {
+    padding: 25px 20px;
+  }
+  
+  .contactItem {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .contactIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .socialLinks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

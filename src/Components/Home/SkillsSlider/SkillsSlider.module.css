@@ -1,0 +1,160 @@
+.sliderContainer {
+  width: 100%;
+  padding: 40px 20px;
+  overflow: hidden;
+  position: relative;
+  background-color:#fef8f3;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.sliderTrack {
+  display: flex;
+  gap: 25px;
+  animation: slide 20s linear infinite;
+  padding: 10px 0;
+}
+
+.sliderTrack:hover {
+  animation-play-state: paused;
+}
+
+.skillCard {
+  min-width: 150px;
+  height: 150px;
+  background: rgba(249, 247, 247, 0.95);
+  border-radius: 15px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.skillCard:hover {
+  transform: scale(1.05);
+  background: white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.skillCard:hover .icon {
+  transform: scale(1.1);
+}
+
+.skillName {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.skillCard:hover .skillName {
+  color: #667eea;
+}
+
+.description {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+  line-height: 1.4;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.3s ease;
+}
+
+.skillCard:hover .description {
+  opacity: 1;
+  max-height: 100px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* transform: translateX(calc(-250px * 9 - 25px * 9)); */
+    transform: translateX(calc(-150px * 9 - 25px * 9));
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sliderContainer {
+    padding: 30px 15px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .skillCard {
+    min-width: 200px;
+    height: 180px;
+    padding: 20px;
+  }
+  
+  .skillName {
+    font-size: 1.2rem;
+  }
+  
+  .description {
+    font-size: 0.8rem;
+  }
+  
+  @keyframes slide {
+    100% {
+      transform: translateX(calc(-200px * 5 - 25px * 5));
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .sliderContainer {
+    padding: 20px 10px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .skillCard {
+    min-width: 160px;
+    height: 160px;
+    padding: 15px;
+  }
+  
+  .icon {
+    font-size: 2.5rem;
+  }
+  
+  .skillName {
+    font-size: 1rem;
+  }
+  
+  .description {
+    font-size: 0.75rem;
+  }
+}
