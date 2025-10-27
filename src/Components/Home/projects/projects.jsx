@@ -3,18 +3,23 @@ import styles from "./projects.module.css";
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import calc from  "../../../../public//imgs/calc.jpeg";
+import stop from  "../../../../public//imgs/stop.gif";
+import bugati from  "../../../../public//imgs/2019-Bugatti-Divo-001-1600.jpg";
+import wall from  "../../../../public//imgs/wall.jpg";
+import crud from  "../../../../public//imgs/crud.png";
 
 
 const arraycard = [
     {
-      Image: "../src/assets/calc.jpeg",
+      Image: calc,
       title: "Calculator App", 
       text: "Technologies: React, Node.js , react-router, react-hooks",
       category: "REACT",
       link:"https://ahmed-m-manaa.github.io/calculator/",
     },
     {
-     Image: "../src/assets/stop.gif",
+     Image: stop,
      title: "Stop watch Application", 
      text: "Technologies: JavaScript , LocalStorage",
      category: "JavaScript",
@@ -22,21 +27,21 @@ const arraycard = [
    },
    
    {
-     Image: "../src/assets/2019-Bugatti-Divo-001-1600.jpg",
+     Image: bugati,
      title: "Portfolio Website", 
      text: "Technologies: HTML, CSS, JavaScript",
      category: "HTML&CSS",
       link:"https://ahmed-m-manaa.github.io/a-compelete-project-with-bootstrab/",
    },
   {
-    Image: "../src/assets/wall.jpg",
+    Image: wall,
     title: "Cars Website", 
     text: "Technologies: HTML, CSS",
     category: "HTML&CSS",
       link:"https://ahmed-m-manaa.github.io/website-for-cars/",
   },
   {
-    Image: "../src/assets/crud.png",
+    Image: crud,
     title: "CRUD Application", 
     text: "Technologies: JavaScript , LocalStorage",
     category: "JavaScript",
