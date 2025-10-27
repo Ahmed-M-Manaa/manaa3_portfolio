@@ -50,13 +50,14 @@ export default function Navbar() {
       <aside className={`${styles.sidebar} ${sidebarOpen ? styles.open : ""}`}>
         <nav className={styles.sidebarNav}>
           <ul>
-            <li><a href="home" onClick={closeSidebar}>Home</a></li>
-            <li><a href="projects" onClick={closeSidebar}>Projects</a></li>
-            <li><a href="testimonial" onClick={closeSidebar}>Testimonial</a></li>
-            <li><a href="about" onClick={closeSidebar}>About Me</a></li>
-            <li><a href="contact" onClick={closeSidebar}>Contact Me</a></li>
+            <li><a href="#home" onClick={closeSidebar}>Home</a></li>
+            <li><a href="#projects" onClick={closeSidebar}>Projects</a></li>
+            <li><a href="#testimonial" onClick={closeSidebar}>Testimonial</a></li>
+            <li><a href="#about" onClick={closeSidebar}>About Me</a></li>
+            <li><a href="#contact" onClick={closeSidebar}>Contact Me</a></li>
           </ul>
         </nav>
+        
       </aside>
     </>
   );
