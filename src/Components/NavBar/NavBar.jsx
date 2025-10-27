@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styles from "./Navbar.module.css";
+import { useState } from "react";
+import styles from "./NavBar.module.css";
 
 export default function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
